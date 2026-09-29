@@ -37,8 +37,8 @@ services:
 
   agent:
     build: .
-    ports:
-      - "8000:8000"
+    expose:
+      - "8000"
     environment:
       PORT: "8000"
       AGENT_API_KEY: ${AGENT_API_KEY:?AGENT_API_KEY chưa được đặt trong .env}
